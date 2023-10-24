@@ -1,0 +1,69 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Main {
++ {static} void main(String[] args)
+~ {static} void configure(String selected)
+~ {static} void startDigging()
+}
+
+abstract class Excavate {
++ void excavating()
++ abstract Tool usingTool()
+}
+
+class ConcreteExcavator {
++ Tool usingTool()
+}
+
+class ConcreteShovel {
++ Tool usingTool()
+}
+
+interface Tool {
+String Dig()
+}
+
+class ProductShovel {
+String Dig()
+}
+
+class ProductExcavator {
+String Dig()
+}
+
+Main --|> Excavate
+
+Excavate --> Tool
+
+Excavate <|-- ConcreteExcavator
+Excavate <|-- ConcreteShovel
+
+Tool <|.. ProductShovel
+Tool <|.. ProductExcavator
+
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+@enduml
