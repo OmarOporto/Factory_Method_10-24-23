@@ -34,7 +34,7 @@ String Dig()
 
 Main --|> Excavate
 
-Excavate --> Tool
+Excavate ..> Tool
 
 Excavate <|-- ConcreteExcavator
 Excavate <|-- ConcreteShovel
