@@ -1,1 +1,1 @@
-![Logo de mi proyecto](./Documents/Untitled.png)
+![PUML Proyect](./Documents/Untitled.png)
